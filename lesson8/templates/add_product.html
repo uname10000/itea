@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+</head>
+<body>
+    <form action="/admin/add_product" method="post">
+        <input type="text" placeholder="Enter product name" name="product_name">
+        <select name="category_name">
+            {% for category in categories %}
+                <option value="{{category[0]}}">{{category[0]}}</option>
+            {% endfor %}
+        </select>
+        <select name="in_store">
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select>
+        <input type="number" placeholder="price" name="product_price">
+        <input type="submit">
+    </form>
+
+</body>
+</html>

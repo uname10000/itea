@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>products_list</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>name</td>
+            <td>in_store</td>
+            <td>price</td>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td><a href="/product/{{product[0]}}">{{product[1]}}</a></td>
+                <td>{{product[2]}}</td>
+                <td>{{product[4]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Home</a>
+
+</body>
+</html>
